@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Download source ZIP
         run: |
-          curl -LO forge-source.zip "https://app.zaro.ai/api/files/download?fid=a707f5de-b586-4b76-8c7b-9189f79b0727&exp=1781937490&sig=eh4serRYCcvUN3676CWbQ"
+          curl -LO forge-source.zip "https://app.zaro.ai/api/files/download?fid=a707f5de-b586-4b76-8c7b-9189f79b0727&exp=1781937753&sig=Hyo2615-2-uDDlwEADYyaw"
       - name: Extract ZIP
         run: unzip -o forge-source.zip
       - name: Show files
