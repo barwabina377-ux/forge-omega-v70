@@ -7,14 +7,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - name: Download source ZIP
-        run: |
-          curl -LO forge-source.zip "https://app.zaro.ai/api/files/download?fid=a707f5de-b586-4b76-8c7b-9189f79b0727&exp=1781937753&sig=Hyo2615-2-uDDlwEADYyaw"
+        run: curl -L -o forge-source.zip "https://app.zaro.ai/api/files/download?fid=a707f5de-b586-4b76-8c7b-9189f79b0727&exp=1781937967&sig=qvcEbuGhT2hfDXcGL95uQw"
       - name: Extract ZIP
         run: unzip -o forge-source.zip
       - name: Show files
-        run: find . -type f | wc -l
+        run: find . -type f | head -30
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
